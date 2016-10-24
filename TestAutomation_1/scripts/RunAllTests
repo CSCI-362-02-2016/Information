@@ -1,0 +1,6 @@
+cd ../project/src
+javac org/hrvd/util/*/*.java
+java org/hrvd/util/date/TestDriver
+
+
+exit 0
