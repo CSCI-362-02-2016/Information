@@ -1,6 +1,50 @@
+#!/bin/bash
+
 cd ../project/src
 javac org/hrvd/util/*/*.java
 java org/hrvd/util/date/TestDriver
+
+echo "<HTML>" > RESULTS.html
+
+part1="~/Documents/Information-master/TestAutomation_1/temp/testCase"
+part2="Results.txt"
+part3="~/Documents/Information-master/TestAutomation_1/oracles/testCase"
+part4="Oracle.txt"
+part5="Test "
+part6=" Results:"
+
+for i in 1 2 3 4 5 
+do
+	z=$part5$i$part6
+	echo "$z" >> RESULTS.html
+	echo "<br>" >> RESULTS.html
+
+	y=$part1$i$part2
+	file="$y"
+
+	while read line
+	do
+		result="$line"
+	done <"$file"
+
+	z=$part3$i$part4
+	file2="$z"
+
+	while read line2
+	do
+		result2="$line2"
+	done <"$file2"
+
+	if [ "$line" = "$line2" ]; then
+		echo "PASS" >> RESULTS.html
+	else
+		echo "FAIL" >> RESULTS.html
+	fi
+	echo "<br>" >> RESULTS.html
+done
+echo "</HTML>" >> RESULTS.html
+open RESULTS.html
+exit 0
 
 
 exit 0
