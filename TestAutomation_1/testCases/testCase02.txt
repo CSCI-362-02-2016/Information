@@ -1,1 +1,7 @@
+Test ID: 002
+Requirement Tested: The method should return an integer, that shows the number of days between date1 and date2
+Component Being Tested: Flexidate(date1, date2)
+Method Being Tested: getRange()
+Test Input: date1 =1999,5,5 date2 = 2000,5,5
+Expected Outcome: 366
 
