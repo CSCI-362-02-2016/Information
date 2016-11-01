@@ -138,6 +138,52 @@ public class TestDriver {
         }
 	}
 	
+	private static void testCase6()
+	{
+		try
+		{
+			Calendar date1 = new GregorianCalendar(2001, 9 11);
+			Flexidate fdate = new Flexidate(date1);
+			int year = fdate.getYear();
+			String result = Integer.toString(year);
+			results.add(result);
+		}
+		catch ( Throwable t )
+		{
+			t.printStackTrace( System.err );	
+		}
+	}
+	private static void testCase7()
+	{
+		try
+		{
+			Calendar date1 = new GregorianCalendar(2016, 12, 25);
+			Flexidate fdate = new Flexidate(date1);
+			int day = fdate.getDay();
+			String result = Integer.toString(day);
+			results.add(result);
+		}
+		catch ( Throwable t )
+		{
+			t.printStackTrace( System.err );	
+		}
+	}
+	
+	private static void testCase8()
+	{
+		try
+		{
+			Calendar date1 = new GregorianCalendar(1995, 06, 29);
+			Flexidate fdate = new Flexidate(date1);
+			int month = fdate.getMonth();
+			String result = Integer.toString(month);
+			results.add(result);
+		}
+		catch ( Throwable t )
+		{
+			t.printStackTrace( System.err );	
+		}
+	}
 	private static void writeResultsToFile(ArrayList<String> results)
 	{
 		
