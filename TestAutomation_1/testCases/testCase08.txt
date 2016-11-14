@@ -1,0 +1,13 @@
+Test ID: 008
+
+Requirement Tested:The method should return an integer, that gets the month of date1
+
+Component Being Tested: Flexidate(date1)
+
+Component Path: project/src/org/hrvd/util/date/Flexidate
+
+Method Being Tested: getMonth()
+
+Test Input: date1 = 1995, 10, 29
+
+Expected Outcome: 10
