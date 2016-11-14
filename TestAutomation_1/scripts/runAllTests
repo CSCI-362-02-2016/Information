@@ -1,0 +1,31 @@
+#!/bin/bash
+FILES=testCases/*
+for f in $FILES; do
+    COUNTER=1
+    while read -r line; do
+        [[ "$line" =~ ^#.*$ ]] && continue
+           LINES[$COUNTER]=$line
+           ((COUNTER++))
+      	
+    done < $f
+    
+    TESTCASE=${LINES[1]}
+    DESCRIPTION=${LINES[2]}
+    PATHTODRIVER=${LINES[3]}
+    COMPONENT=${LINES[4]}
+    DEPENDENCIES=${LINES[5]}
+    METHOD=${LINES[6]}
+    INPUT=${LINES[7]}
+    EXPECTEDOUTPUT=${LINES[8]}
+
+    TESTDRIVER="${COMPONENT}Driver"
+	
+	javac $DEPENDENCIES
+		
+	cd $PATHTODRIVER
+	java $TESTDRIVER "$METHOD" "$INPUT" "$TESTCASE"
+	
+	cd ~/Documents/Information-master/TestAutomation_1
+    
+done
+
