@@ -1,0 +1,13 @@
+Test ID: 018
+
+Requirement Tested:The method should return a boolean, that compares objects int[] o1 and int[] o2
+
+Component Being Tested: Object(Object[] o1, Object[] o2)
+
+Component Path: project/src/org/hrvd/util/object/Comparison
+
+Method Being Tested: deepEqual(Object[] o1, Object[] o2)
+
+Test Input: int[] x = [3], int[] y = [3]
+
+Expected Outcome: true
