@@ -1,0 +1,13 @@
+Test ID: 011
+
+Requirement Tested:The method should return an integer, that compares long x and y
+
+Component Being Tested: Object(int x, int y)
+
+Component Path: project/src/org/hrvd/util/object/Comparison
+
+Method Being Tested: compare(long x, long y)
+
+Test Input: long x = 111222333, long y = 223334445
+
+Expected Outcome: -1
