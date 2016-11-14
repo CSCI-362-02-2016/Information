@@ -1,0 +1,13 @@
+Test ID: 021
+
+Requirement Tested:The method should return a boolean, that compares lists int[] x and int[] y
+
+Component Being Tested: Object(int[] x, int[] y)
+
+Component Path: project/src/org/hrvd/util/object/Comparison
+
+Method Being Tested: deepEqual(int[] o1, int[] o2)
+
+Test Input: int[] x = {}, int[] y = {1,2,3}
+
+Expected Outcome: false
