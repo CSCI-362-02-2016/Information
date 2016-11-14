@@ -10,4 +10,4 @@ Method Being Tested: getDay()
 
 Test Input: date1 = -5,-10,-5
 
-Expected Outcome: 23
+Expected Outcome: -5
