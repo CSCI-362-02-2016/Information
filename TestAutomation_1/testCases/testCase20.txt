@@ -1,0 +1,13 @@
+Test ID: 020
+
+Requirement Tested:The method should return an integer, that compares objects int x and int[] y
+
+Component Being Tested: Object(int x, int y)
+
+Component Path: project/src/org/hrvd/util/object/Comparison
+
+Method Being Tested: compare(int x, int y)
+
+Test Input: int[ x = -100, int y = -500
+
+Expected Outcome: 1
