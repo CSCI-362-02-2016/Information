@@ -1,0 +1,13 @@
+Test ID: 009
+
+Requirement Tested:The method should return an integer, that compares the x and y
+
+Component Being Tested: Comparison(x,y)
+
+Component Path: project/src/org/hrvd/util/object/Comparison
+
+Method Being Tested: compare(int x,int y)
+
+Test Input: x = 5, y = 6
+
+Expected Outcome: -1
