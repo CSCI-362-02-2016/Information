@@ -1,0 +1,13 @@
+Test ID: 023
+
+Requirement Tested:The method should return an integer, that is the day of date1
+
+Component Being Tested: Flexidate(int date1)
+
+Component Path: project/src/org/hrvd/util/date/Flexidate
+
+Method Being Tested: getDay()
+
+Test Input: date1 = -5,-10,-5
+
+Expected Outcome: 23
