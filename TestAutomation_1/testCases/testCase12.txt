@@ -1,0 +1,13 @@
+Test ID: 012
+
+Requirement Tested:The method should return an long, that compares longs x and y
+
+Component Being Tested: Object(long x, long y)
+
+Component Path: project/src/org/hrvd/util/object/Comparison
+
+Method Being Tested: compare(long x, long y)
+
+Test Input: long x = 111222333, long y = 11122233;
+
+Expected Outcome: 0
