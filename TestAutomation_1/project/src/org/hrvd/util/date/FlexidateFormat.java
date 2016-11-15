@@ -54,6 +54,7 @@ import org.hrvd.util.res.Resources;
  *
  * @author  rafe
  */
+ @SuppressWarnings("unchecked")
 public class FlexidateFormat extends Format {
     
     private static final String COUNT_KEY = "date.format.count";

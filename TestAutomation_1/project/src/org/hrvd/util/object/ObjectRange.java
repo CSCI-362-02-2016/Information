@@ -42,6 +42,7 @@ import java.util.Comparator;
  *
  * @author  rafe
  */
+ @SuppressWarnings("unchecked")
 public class ObjectRange {
     
     private Object high;

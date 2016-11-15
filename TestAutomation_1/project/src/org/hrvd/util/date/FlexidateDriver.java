@@ -14,6 +14,7 @@ public class FlexidateDriver {
 
 	static int testCaseNumber;
 	static String result;
+	
 	public static void main(String[] args)
 	{
 		String method = args[0];
@@ -36,11 +37,28 @@ public class FlexidateDriver {
 		// create two calendars that will be used as input for flexidate object
 		Calendar date1 = new GregorianCalendar(firstDateYear, firstDateMonth, firstDateDay);
 		Calendar date2 = new GregorianCalendar(secondDateYear, secondDateMonth, secondDateDay);
+		
+		// create the flexidate object
+		Flexidate flexidate = new Flexidate(date1, date2); 
 
 		switch(method)
 		{
 			case "getRange":
-				 result = testGetRange(date1, date2);			
+				 result = testGetRange(flexidate);
+				 break;
+			case "getMonth":
+				result = testGetMonth(flexidate);
+				break;
+			case "getYear":
+				result = testGetYear(flexidate);
+				break;
+			case "getDay":
+				result = testGetDay(flexidate);
+				break;
+			default:
+				result = "method is not valid";
+				break;
+							
 		} 
 
 		
@@ -48,13 +66,30 @@ public class FlexidateDriver {
 	}
 
 
-	private static String testGetRange(Calendar date1, Calendar date2)
+	private static String testGetRange(Flexidate flexidate)
 	{
 		
-		Flexidate flexidate = new Flexidate(date1, date2);
 		String range = Integer.toString(flexidate.getRange());				
 		return range;
 	}	
+	
+	private static String testGetYear(Flexidate flexidate)
+	{
+		String year = Integer.toString(flexidate.getYear());
+		return year;
+	}
+	
+	private static String testGetMonth(Flexidate flexidate)
+	{
+		String month = Integer.toString(flexidate.getMonth());
+		return month;
+	}
+	
+	private static String testGetDay(Flexidate flexidate)
+	{
+		String day = Integer.toString(flexidate.getDay());
+		return day;
+	}
 		
 	private static void writeResultToFile(String result)
 	{

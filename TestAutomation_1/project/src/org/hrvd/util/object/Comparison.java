@@ -42,6 +42,7 @@ import java.util.Comparator;
  * Utility functions for doing generic and safe comparisons.
  * @author rafe
  */
+@SuppressWarnings("unchecked")
 public class Comparison {
     
     /** Creates a new instance of Comparison */
