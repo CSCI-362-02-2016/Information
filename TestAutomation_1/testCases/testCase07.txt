@@ -1,13 +1,22 @@
-Test ID: 007
+# Test ID:
+#
+# Requirement Tested
+#
+# Component Path
+#
+# Component Being Tested
+#
+# Method Being Tested
+#
+# Test Input
+#
+# Expected Outcome
 
-Requirement Tested:The method should return an integer, that gets the day from dat1
-
-Component Being Tested: Flexidate(date1)
-
-Component Path: project/src/org/hrvd/util/date/Flexidate
-
-Method Being Tested: getDay()
-
-Test Input: date1 = (2010,12,25)
-
-Expected Outcome: 25
+007
+The method should return an integer, that gets the day of date1
+project/src/org/hrvd/util/date/Flexidate
+Flexidate(date1,date2)
+Dependencies
+getDay()
+date1 = 2010,12,25
+25
