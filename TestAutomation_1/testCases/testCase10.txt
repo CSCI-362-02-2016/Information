@@ -1,13 +1,22 @@
-Test ID: 010
+# Test ID
+#
+# Requirement Tested
+#
+# Component Path
+#
+# Component Being Tested
+#
+# Method Being Tested
+#
+# Test Input
+#
+# Expected Outcome
 
-Requirement Tested:The method should return an integer, that compares integers x and y
-
-Component Being Tested: Object(int x, int y)
-
-Component Path: project/src/org/hrvd/util/object/Comparison
-
-Method Being Tested: compare(int x, int y)
-
-Test Input: int x = 10, int y = 10
-
-Expected Outcome: 0
+010
+The method should return an integer, that compares the integers x and y
+project/src/org/hrvd/util/object/comparison
+Comparison.java
+Dependencies
+compare(int x, int y)
+x = 10, y = 10
+0
