@@ -2,7 +2,7 @@
 
 FILECOUNTER=0;
 FILES=testCases/*
-
+SOMECOUNTER=1;
 #read through testcases 
 for f in $FILES; do
     LINECOUNTER=1
@@ -21,8 +21,11 @@ for f in $FILES; do
     COMPONENT=${LINES[4]}
     DEPENDENCIES=${LINES[5]}
     METHOD=${LINES[6]}
-    INPUT=${LINES[7]} 
+    INPUT=${LINES[7]}
     EXPECTEDOUTPUT=${LINES[8]}
+
+    # write expected output to oracle files
+    echo $EXPECTEDOUTPUT > "oracles/testCase0${SOMECOUNTER}Oracle.txt"
 
     TESTDRIVER="${COMPONENT}Driver"
 
@@ -41,6 +44,7 @@ for f in $FILES; do
     cd - > /dev/null
 
     ((FILECOUNTER++))
+    ((SOMECOUNTER++))
 done
 
 #read results from test driver and store in array
