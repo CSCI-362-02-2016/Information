@@ -1,13 +1,22 @@
-Test ID: 012
+# Test ID:
+#
+# Requirement Tested
+#
+# Component Path
+#
+# Component Being Tested
+#
+# Method Being Tested
+#
+# Test Input
+#
+# Expected Outcome
 
-Requirement Tested:The method should return an long, that compares longs x and y
-
-Component Being Tested: Object(long x, long y)
-
-Component Path: project/src/org/hrvd/util/object/Comparison
-
-Method Being Tested: compare(long x, long y)
-
-Test Input: long x = 111222333, long y = 11122233;
-
-Expected Outcome: 0
+012
+The method should return an integer, that compares the long integers x and y
+project/src/org/hrvd/util/object/Comparison
+Comparison.java
+Dependencies
+compare(long x, long y)
+long x = 111222333, long y = 11122233
+0
