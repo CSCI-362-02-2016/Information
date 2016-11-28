@@ -11,7 +11,6 @@
 # Test Input
 #
 # Expected Outcome
-
 024
 The method should return an integer, that is the range between integers date1 and date2
 project/src/org/hrvd/util/date/Flexidate
