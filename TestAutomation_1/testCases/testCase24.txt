@@ -1,13 +1,22 @@
-Test ID: 022
+# Test ID
+#
+# Requirement Tested
+#
+# Component Path
+#
+# Component Being Tested
+#
+# Method Being Tested
+#
+# Test Input
+#
+# Expected Outcome
 
-Requirement Tested:The method should return an integer, and get the range between the date date1 adn date2
-
-Component Being Tested: Flexidate(int date1, int date2)
-
-Component Path: project/src/org/hrvd/util/date/Flexidate
-
-Method Being Tested: getRange
-
-Test Input: intdate1 = -5, -10, -10 int date2 = -5, -10, -12
-
-Expected Outcome: 2
+024
+The method should return an integer, that is the range between integers date1 and date2
+project/src/org/hrvd/util/date/Flexidate
+Flexidate.java
+Dependencies
+getRange()
+int date1 = -5,-10,-10 int date2 = -5,-10,-12
+2
