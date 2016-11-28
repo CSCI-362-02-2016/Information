@@ -1,13 +1,22 @@
-Test ID: 022
+# Test ID
+#
+# Requirement Tested
+#
+# Component Path
+#
+# Component Being Tested
+#
+# Method Being Tested
+#
+# Test Input
+#
+# Expected Outcome
 
-Requirement Tested:The method should return an integer, that is the month of date1
-
-Component Being Tested: Flexidate(int date1)
-
-Component Path: project/src/org/hrvd/util/date/Flexidate
-
-Method Being Tested: getMonth()
-
-Test Input: date1 = 0,0,0
-
-Expected Outcome: 0
+022
+The method should return an integer, that gets the month of date1
+project/src/org/hrvd/util/date/Flexidate
+Flexidate.java
+Dependencies
+getMonth()
+date1 = 0,0,0
+0
