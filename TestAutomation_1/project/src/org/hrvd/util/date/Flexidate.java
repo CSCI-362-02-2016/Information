@@ -49,6 +49,8 @@ import org.hrvd.util.object.Predicate;
  *
  * @author  rafe
  */
+
+@SuppressWarnings("unchecked")
 public final class Flexidate implements java.lang.Comparable {
 
     public static final int DAY_CONTEXT = 0;
