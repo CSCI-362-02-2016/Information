@@ -1,4 +1,4 @@
-# Test ID:
+# Test ID
 #
 # Requirement Tested
 #
@@ -11,7 +11,7 @@
 # Test Input
 #
 # Expected Outcome
-008
+009
 The method should return an integer, that compares the integers x and y
 project/src/org/hrvd/util/object/comparison
 Comparison.java
