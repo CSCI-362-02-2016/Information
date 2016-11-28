@@ -1,13 +1,22 @@
-Test ID: 017
+# Test ID
+#
+# Requirement Tested
+#
+# Component Path
+#
+# Component Being Tested
+#
+# Method Being Tested
+#
+# Test Input
+#
+# Expected Outcome
 
-Requirement Tested:The method should return a boolean, that compares list int[] o1 and int[] o2
-
-Component Being Tested: Object(int[] o1, int[] o2)
-
-Component Path: project/src/org/hrvd/util/object/Comparison
-
-Method Being Tested: deepEqual(int[] o1, int[] o2)
-
-Test Input: int[] x = {}, int[] y = {}
-
-Expected Outcome: true
+017
+The method should return a boolean, that compares lsits int[] x and int[] y
+project/src/org/hrvd/util/object/Comparison
+Comparison.java
+Dependencies
+deepEqual(int[] x, int[] y]
+int[] x = {}, int[] y = {}
+true
