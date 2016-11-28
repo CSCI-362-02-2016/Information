@@ -1,14 +1,21 @@
-Test ID: 002
-
-Requirement Tested: The method should return an integer, that shows the number of days between date1 and date2
-
-Compnent Path: project/src/org/hrvd/util/date/Flexidate
-
-Component Being Tested: Flexidate.java
-
-Method Being Tested: getRange()
-
-Test Input: date1 =1999,5,5 date2 = 2000,5,5
-
-Expected Outcome: 366
-
+# Test ID: 002
+#
+# Requirement Tested: The method should return an integer, that shows the number of # # days between date1 and date2
+#
+# Component Path: project/src/org/hrvd/util/date/Flexidate
+#
+# Component Being Tested: Flexidate(date1, date2)
+#
+# Method Being Tested: getRange()
+#
+# Test Input: date1 =1999,5,5 date2 = 2000,5,5
+#
+# Expected Outcome: 366
+002
+The method should return an integer, that shows the number of days between date1 and date2
+project/src/org/hrvd/util/date/Flexidate
+Flexidate(date1, date2)
+Dependencies
+getRange()
+date1 =1999,5,5 date2 = 2000,5,5
+366
