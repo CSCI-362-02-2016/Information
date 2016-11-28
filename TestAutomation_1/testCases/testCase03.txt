@@ -10,7 +10,7 @@
 #
 # Test Input
 #
-# Expected Outcome: 31
+# Expected Outcome
 
 003
 The method should return an integer, that shows the number of days between date1 and date2
