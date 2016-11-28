@@ -11,7 +11,6 @@
 # Test Input
 #
 # Expected Outcome
-
 025
 The method should return a boolean, that compares int low1, int high1, int low2, and int high2
 project/src/org/hrvd/util/object/Comparison
