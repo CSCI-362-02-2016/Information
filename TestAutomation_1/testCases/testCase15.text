@@ -1,16 +1,3 @@
-Test ID: 015
-
-Requirement Tested:The method should return a boolean, that compares list int[] o1 and int[] o2
-
-Component Being Tested: Object(int[] o1, int[] o2)
-
-Component Path: project/src/org/hrvd/util/object/Comparison
-
-Method Being Tested: deepEqual(int[] o1, int[] o2)
-
-Test Input: int[] x = {1,2,3}, int[] y = {1,2,3}
-
-Expected Outcome: true
 # Test ID
 #
 # Requirement Tested
@@ -25,7 +12,7 @@ Expected Outcome: true
 #
 # Expected Outcome
 
-01
+015
 The method should return a boolean, that compares lsits int[] x and int[] y
 project/src/org/hrvd/util/object/Comparison
 Comparison.java
