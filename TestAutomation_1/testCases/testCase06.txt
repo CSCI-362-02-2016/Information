@@ -1,17 +1,4 @@
-Test ID: 005
-
-Requirement Tested:The method should return an integer, gets the year of date1.
-
-Component Being Tested: Flexidate(date1)
-
-Component Path: project/src/org/hrvd/util/date/Flexidate
-
-Method Being Tested: getYear()
-
-Test Input: date1 = 2001, 9, 11)
-
-Expected Outcome: 9
-# Test ID: 005
+# Test ID: 006
 #
 # Requirement Tested: The method should return an integer, gets the year of date1
 #
