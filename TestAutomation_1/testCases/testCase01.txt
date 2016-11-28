@@ -1,10 +1,16 @@
-# Test ID
-# Requirement Tested
-# Component Path
-# Component Being Tested
-# Method Being Tested
-# Test Input
-# Expected Outcome
+# Test ID: 001
+#
+# Requirement Tested: 
+#
+# Component Path:
+#
+# Component Being Tested:
+#
+# Method Being Tested:
+#
+# Test Input:
+#
+# Expected Outcome:
 
 001
 The method should return an integer, that shows the number of days between date1 and date2
@@ -14,4 +20,3 @@ Dependencies
 getRange()
 date1 = 2001,5,5 date 2 = 2002,5,5
 365
-
