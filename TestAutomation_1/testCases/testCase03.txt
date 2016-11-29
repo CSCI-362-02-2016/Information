@@ -1,21 +1,17 @@
-# Test ID
-#
-# Requirement Tested
-#
+# Test Case Number
+# Requirement
 # Component Path
-#
-# Component Being Tested
-#
-# Method Being Tested
-#
-# Test Input
-#
-# Expected Outcome
+# Component being tested
+# Dependencies
+# Method being tested
+# Input (year,month,day;year,month,day)
+# Expected Output
 003
 The method should return an integer, that shows the number of days between date1 and date2
-project/src/org/hrvd/util/date/Flexidate
-Flexidate.java
-Dependencies
-getRange()
-date1 = 2020,4,25 date 2 = 2020,5,25
-31
+project/src/
+org/hrvd/util/date/Flexidate
+project/src/org/hrvd/util/*/*.java
+getRange
+2000,5,5;2000,5,5
+0
+
