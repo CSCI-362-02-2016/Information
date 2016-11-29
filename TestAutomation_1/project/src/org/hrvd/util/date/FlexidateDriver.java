@@ -93,12 +93,14 @@ public class FlexidateDriver {
 		
 	private static void writeResultToFile(String result)
 	{
-        
-        String filename = "../../temp/testCase" + testCaseNumber + "Results.txt";
+		String filename;
+        if(testCaseNumber < 10)
+        	filename = "../../temp/testCase0" + testCaseNumber + "Results.txt";
+        else
+        	filename = "../../temp/testCase" + testCaseNumber + "Results.txt";
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(
             new FileOutputStream(filename), "utf-8"))) 
         {
-        	//writer.write(Integer.toString(i + 1) + ": ");
   			writer.write(result);
   			writer.write("\n");
   		}
