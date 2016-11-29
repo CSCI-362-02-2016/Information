@@ -8,7 +8,7 @@
 #
 # Method Being Tested:
 #
-# Test Input:
+# Test Input seperate dates with ';': year,month,day;year,month,day
 #
 # Expected Outcome
 001
@@ -17,5 +17,5 @@ project/src/org/hrvd/util/date/Flexidate
 Flexidate.java
 Dependencies
 getRange()
-date1 = 2001,5,5 date 2 = 2002,5,5
+2001,5,5;2002,5,5
 365
