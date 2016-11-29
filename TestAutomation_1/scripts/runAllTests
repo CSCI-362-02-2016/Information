@@ -25,7 +25,13 @@ for f in $FILES; do
     EXPECTEDOUTPUT=${LINES[8]}
 
     # write expected output to oracle files
-    echo $EXPECTEDOUTPUT > "oracles/testCase0${SOMECOUNTER}Oracle.txt"
+    if [[ "$SOMECOUNTER" -lt "10" ]]; then
+        echo $EXPECTEDOUTPUT > "oracles/testCase0${SOMECOUNTER}Oracle.txt"
+    fi
+
+    if [[ "$SOMECOUNTER" -ge "10" ]]; then
+        echo $EXPECTEDOUTPUT > "oracles/testCase${SOMECOUNTER}Oracle.txt"
+    fi
 
     TESTDRIVER="${COMPONENT}Driver"
 
