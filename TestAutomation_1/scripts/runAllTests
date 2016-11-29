@@ -2,8 +2,6 @@
 
 FILECOUNTER=0;
 FILES=testCases/*
-
-# counter for naming oracle files
 SOMECOUNTER=1;
 #read through testcases 
 for f in $FILES; do
@@ -81,12 +79,15 @@ cat >testresults.html <<EOF
 <html>
 <head>
 <style>
+table {
+    border-collapse: collapse;
+}
+
 table, th, td {
-border: 1px solid black;
-border-collapse: collape;
-border-color: #aaaaaa;
-border-width: 3px;
-padding: 10px;
+    border: 1px solid black;
+    border-color: #aaaaaa;
+    border-width: 3px;
+    padding: 10px;
 }
 th {
 background-color: #aaaaaa;
@@ -148,36 +149,40 @@ for f in $FILES; do
 
   # add test information to HTML document
   echo "<tr>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n $TESTCASE >> testresults.html
-  echo "</th>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo "</td>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n $DESCRIPTION >> testresults.html
-  echo "</th>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo "</td>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n $COMPONENT >> testresults.html
-  echo "</th>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo "</td>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n $METHOD >> testresults.html
-  echo "</th>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo "</td>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n $INPUT >> testresults.html
-  echo "</th>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo "</td>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n $EXPECTEDOUTPUT >> testresults.html
-  echo "</th>" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo "</td>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   echo -n "${RESULTS[ANOTHERCOUNTER]}" >> testresults.html
-  echo -n "<th>" >> testresults.html
+  echo -n "<td>" >> testresults.html
   
   if [[ " ${RESULTS[ANOTHERCOUNTER]} " =~ " ${ORACLES[$ANOTHERCOUNTER]} " ]]; then
-    echo -n "pass" >> testresults.html 
+    	echo -n "<font color="green">" >> testresults.html
+	echo -n "pass" >> testresults.html
+	echo -n "</font>" >> testresults.html
   fi
 
   if [[ ! " ${RESULTS[ANOTHERCOUNTER]} " =~ " ${ORACLES[$ANOTHERCOUNTER]} " ]]; then
-    echo -n "fail" >> testresults.html 
+	echo -n "<font color="red">" >> testresults.html    
+	echo -n "fail" >> testresults.html
+	echo -n "</font>" >> testresults.html
   fi
-  echo "</th>" >> testresults.html
+  echo "</td>" >> testresults.html
   # echo "Actual Outcome" >> testresults.html
   # echo "Test Status" >> testresults.html
   echo "</tr>" >> testresults.html
