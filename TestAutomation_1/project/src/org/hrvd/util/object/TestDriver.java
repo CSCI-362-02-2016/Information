@@ -8,274 +8,78 @@ import java.io.*;
 
 public class TestDriver {
 
-	private static ArrayList<String> results;
+	static String result;
+	static int testCaseNumber;
  
 	public static void main(String[] args)
 	{
-		results = new ArrayList();
-    	
-    		testCase20();
-    	
-    		writeResultsToFile(results);    	
-    	
+		String method = args[0];
+		String input  = args[1];
+		testCaseNumber = Integer.parseInt(args[2]);   
+    		String[] testParameters = input.split(";");
+		
+		switch
+		{
+			case "compare":
+				int firstInt = Integer.parseInt(testParameters[0]);
+				int secondInt = Integer.parseInt(testParameters[1]);
+				result = testCompare(firstInt, secondInt);
+				break;
+			case "deepEquals":
+				result = deepEquals(int[] x, int[] y);
+				break;
+			case "rangeOverlap":
+				int low1 = Integer.parseInt(testParameter[0]);
+				int high1 = Integer.parseInt(testParameter[1]);
+				int low2 = Integer.parseInt(testParameter[2]);
+				int high2 = Integer.parseInt(testParameter[3]);
+				result = rangeOverlap(int low1, int high1, int low2, int high2);
+				break;
+			default:
+				result = "Method not valid!";
+				break;
+		}
+		writeResultToFile(result);
+	}
+
+	private static String testCompare(int x, int y)
+	{
+		int compared = Comparison.compare(x,y);
+		String results = Integer.toString(compared);
+		return results;
+	}
+		
+	private static String testrangeOverlap(int low1, int high1, int low2, int high2)
+	{
+		boolean compared = Comparison.rangeOverlap(low1,high1,low2,high2);
+		String results = Boolean.toString(compared);
+		return results;
+		
 	}
 	
-	/*private static void testCase1()
+	private static String testDeepEquals(int[] x, int[] y)
 	{
-		
-		try 
-    	{
-         	Calendar date1 = new GregorianCalendar( 2001, 5, 5 );
-            Calendar date2 = new GregorianCalendar( 2002, 5, 5 );
-            
-            Flexidate fdate = new Flexidate( date1, date2 );
-            
-            int range = fdate.getRange();
-            
-            String result = Integer.toString(range);
-           	
-          	results.add(result);
+		boolean compared = Comparison.deepEquals(list1, list2);
+		String results = Boolean.toString(compared);
+		return results;
+	}
+
+	private static void writeResultToFile(String result)
+	{
         
-        }
-        catch ( Throwable t ) 
+        String filename = "../../temp/testCase" + testCaseNumber + "Results.txt";
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+            new FileOutputStream(filename), "utf-8"))) 
+        {
+        	//writer.write(Integer.toString(i + 1) + ": ");
+  			writer.write(result);
+  			writer.write("\n");
+  		}
+  				
+  		catch ( Throwable t ) 
         {
             t.printStackTrace( System.err );
-        }
-		
-	*/
-	
-	private static void testCase9()
-	{
-		try
-		{
-			int x = 5;
-			int y = 6;
-			int compared = Comparison.compare(x,y);
-			String result = Integer.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-	private static void testCase10()
-	{
-		try
-		{
-			int x = 10;
-			int y = 10;
-			int compared = Comparison.compare(x,y);
-			String result = Integer.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-	private static void testCase11()
-	{
-		try
-		{
-			long x = 111222333;
-			long y = 223334445;
-			int compared = Comparison.compare(x,y);
-			String result = Integer.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-	
-	private static void testCase12()
-	{
-		try
-		{
-			long x = 11122233;
-			long y = 11122233;
-			int compared = Comparison.compare(x,y);
-			String result = Integer.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-
-	private static void testCase13()
-	{
-		try
-		{
-			int low1 = 5;
-			int low2 = 6;
-			int high1 = 10;
-			int high2 = 20;
-			boolean compared = Comparison.rangeOverlap(low1,high1,low2,high2);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-	
-	private static void testCase14()
-	{
-		try
-		{
-			int low1 = 6;
-			int low2 = 5;
-			int high1 = 10;
-			int high2 = 20;
-			boolean compared = Comparison.rangeOverlap(low1,high1,low2,high2);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-
-	private static void testCase15()
-	{
-		try
-		{
-			int[] x = {1,2,3};
-			int[] y = {1,2,3};
-			boolean compared = Comparison.deepEquals(x,y);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-
-	private static void testCase16()
-	{
-		try
-		{
-			int[] x = {1,2,3};
-			int[] y = {4,5,6};
-			boolean compared = Comparison.deepEquals(x,y);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-
-	private static void testCase17()
-	{
-		try
-		{
-			int[] x = {};
-			int[] y = {};
-			boolean compared = Comparison.deepEquals(x,y);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-
-	private static void testCase18()
-	{
-		try
-		{
-			Comparison[] x = new Comparison[3];
-			Comparison[] y = new Comparison[3];
-			boolean compared = Comparison.deepEquals(x,y);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-
-	private static void testCase19()
-	{
-		try
-		{
-			Comparison[] x = new Comparison[3];
-			Comparison[] y = new Comparison[1];
-			boolean compared = Comparison.deepEquals(x,y);
-			String result = Boolean.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-	private static void testCase20()
-	{
-		try
-		{
-			int x = -100;
-			int y = -500;
-			int compared = Comparison.compare(x,y);
-			String result = Integer.toString(compared);
-			results.add(result);
-		
-		}
-		catch ( Throwable t )
-		{
-			t.printStackTrace( System.err );
-		}
-	}
-	
-
-	private static void writeResultsToFile(ArrayList<String> results)
-	{
-		
-        	for(int i = 0; i < results.size(); i++)
-        	{
-        		String testNumber = Integer.toString(i + 1);
-        		String filename = "../../temp/testCase" + testNumber + "Results.txt";
-        		try (Writer writer = new BufferedWriter(new OutputStreamWriter(
-            		new FileOutputStream(filename), "utf-8"))) 
-        		{
-        			//writer.write(Integer.toString(i + 1) + ": ");
-  					writer.write(results.get(i));
-  					writer.write("\n");
-  				}
-  				
-  				catch ( Throwable t ) 
-        		{
-            		t.printStackTrace( System.err );
-       			}
-  			}
-				
-		
-}
-
-
-
-
+       	}
+  	}
 
 }
