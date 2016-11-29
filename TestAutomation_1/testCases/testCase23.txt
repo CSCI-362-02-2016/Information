@@ -1,21 +1,16 @@
-# Test ID
-#
-# Requirement Tested
-#
+# Test Case Number
+# Requirement
 # Component Path
-#
-# Component Being Tested
-#
-# Method Being Tested
-#
-# Test Input
-#
-# Expected Outcome
+# Component being tested
+# Dependencies
+# Method being tested
+# Input (year,month,day;year,month,day)
+# Expected Output
 023
-The method should return a integer, that is the day of date1
-project/src/org/hrvd/util/date/Flexidate
-Flexidate.java
-Dependencies
-getDay()
-date1 = -5,-10,-5
--5
+The method should return an integer that corresponds to the month of the low date 
+project/src/
+org/hrvd/util/date/Flexidate
+project/src/org/hrvd/util/*/*.java
+getMonth
+2001,11,25;2001,11,25
+12

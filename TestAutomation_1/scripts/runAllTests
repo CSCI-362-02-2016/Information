@@ -2,6 +2,8 @@
 
 FILECOUNTER=0;
 FILES=testCases/*
+
+# counter for naming oracle files
 SOMECOUNTER=1;
 #read through testcases 
 for f in $FILES; do

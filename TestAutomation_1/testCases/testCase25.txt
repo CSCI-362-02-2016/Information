@@ -1,21 +1,16 @@
-# Test ID
-#
-# Requirement Tested
-#
+# Test Case Number
+# Requirement
 # Component Path
-#
-# Component Being Tested
-#
-# Method Being Tested
-#
-# Test Input
-#
-# Expected Outcome
+# Component being tested
+# Dependencies
+# Method being tested
+# Input (year,month,day;year,month,day)
+# Expected Output
 025
-The method should return a boolean, that compares int low1, int high1, int low2, and int high2
-project/src/org/hrvd/util/object/Comparison
-Comparison.java
-Dependencies
-rangeOverlap(int low1, int high1, int low2, int high2)
-int low1 = 21, int low2 = 5, int high1 = 10, int high2 = 20
-false
+The method should return an integer that corresponds to the month of the low date 
+project/src/
+org/hrvd/util/date/Flexidate
+project/src/org/hrvd/util/*/*.java
+getMonth
+2000,2,11;1776,4,9
+5

@@ -1,21 +1,16 @@
-# Test ID
-#
-# Requirement Tested
-#
+# Test Case Number
+# Requirement
 # Component Path
-#
-# Component Being Tested
-#
-# Method Being Tested
-#
-# Test Input
-#
-# Expected Outcome
+# Component being tested
+# Dependencies
+# Method being tested
+# Input (year,month,day;year,month,day)
+# Expected Output
 015
-The method should return a boolean, that compares lsits int[] x and int[] y
-project/src/org/hrvd/util/object/Comparison
-Comparison.java
-Dependencies
-deepEqual(int[] x and int[] y]
-int[] x = {1,2,3}, int[] y = {1,2,3}
-true
+The method should return an integer, that shows the year for the lower date
+project/src/
+org/hrvd/util/date/Flexidate
+project/src/org/hrvd/util/*/*.java
+getYear
+1,12,25;0,12,25
+1
