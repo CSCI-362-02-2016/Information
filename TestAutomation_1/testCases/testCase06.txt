@@ -13,9 +13,10 @@
 # Expected Outcome:2001
 006
 The method should return an integer, that gets the year of date1
+project/src
 project/src/org/hrvd/util/date/Flexidate
 Flexidate(date1)
 Dependencies
-getYear()
+getYear
 2001,9,11;2001,9,11
 2001
