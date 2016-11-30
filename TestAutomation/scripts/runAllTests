@@ -168,16 +168,16 @@ for f in $FILES; do
   echo -n $EXPECTEDOUTPUT >> testresults.html
   echo "</td>" >> testresults.html
   echo -n "<td>" >> testresults.html
-  echo -n "${RESULTS[ANOTHERCOUNTER]}" >> testresults.html
+  echo -n "${RESULTS[$ANOTHERCOUNTER]}" >> testresults.html
   echo -n "<td>" >> testresults.html
   
-  if [[ " ${RESULTS[ANOTHERCOUNTER]} " =~ " ${ORACLES[$ANOTHERCOUNTER]} " ]]; then
-    	echo -n "<font color="green">" >> testresults.html
+  if [[ " ${RESULTS[$ANOTHERCOUNTER]} " =~ " ${ORACLES[$ANOTHERCOUNTER]} " ]]; then
+  echo -n "<font color="green">" >> testresults.html
 	echo -n "pass" >> testresults.html
 	echo -n "</font>" >> testresults.html
   fi
 
-  if [[ ! " ${RESULTS[ANOTHERCOUNTER]} " =~ " ${ORACLES[$ANOTHERCOUNTER]} " ]]; then
+  if [[ ! " ${RESULTS[$ANOTHERCOUNTER]} " =~ " ${ORACLES[$ANOTHERCOUNTER]} " ]]; then
 	echo -n "<font color="red">" >> testresults.html    
 	echo -n "fail" >> testresults.html
 	echo -n "</font>" >> testresults.html
