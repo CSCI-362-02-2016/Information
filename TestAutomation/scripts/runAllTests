@@ -195,7 +195,7 @@ cat >> testresults.html << EOF
 </html>
 EOF
 
-open testresults.html
+xdg-open testresults.html
 exit 0
 
 
